@@ -40,13 +40,14 @@ function App() {
   }, []);
   const handleAvtive = (data) => {
     const newPieces = pieces.map((piece) => {
-      if (piece.position === data.position) {
+      if (piece.position == data.position) {
         piece.flipped = !piece.flipped;
       }
       return piece;
     });
     setPieces(newPieces);
   };
+  console.log(pieces);
   return (
     <main>
       <h1>Memmery Game in React</h1>
